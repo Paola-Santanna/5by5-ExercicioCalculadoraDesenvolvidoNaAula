@@ -1,6 +1,6 @@
 ﻿//Calculadora com o recebimento de 4 valores. Os 3 valores seguintes não podem ser zero;
 
-float n1, n2, n3, n4;
+float n1, n2, n3, n4, resultado;
 int opcao;
 
 Console.WriteLine("Informe o primeiro valor: ");
@@ -29,3 +29,32 @@ Console.WriteLine("1 - Adição");
 Console.WriteLine("2 - Subtração");
 Console.WriteLine("3 - Multiplicação");
 Console.WriteLine("4 - Divisão");
+opcao = int.Parse(Console.ReadLine());
+
+//Estrutura Condicional Composta Aninhada
+if (opcao == 1)
+{
+    resultado = n1 + n2 + n3 + n4;
+    Console.WriteLine($"O resultado é {resultado}");
+}
+else
+{
+    if (opcao == 2)
+    {
+        resultado = n1 - n2 - n3 - n4;
+        Console.WriteLine($"O resultado é {resultado}");
+    }
+    else
+    {
+        if (opcao == 3)
+        {
+            resultado = n1 * n2 * n3 * n4;
+            Console.WriteLine($"O resultado é {resultado}");
+        }
+        else
+        {
+            resultado = n1 / n2 / n3 / n4;
+            Console.WriteLine($"O resultado é {resultado}");
+        }
+    }
+}
